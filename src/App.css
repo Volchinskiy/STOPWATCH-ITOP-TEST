@@ -1,38 +1,173 @@
-.App {
-  text-align: center;
+body{
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(161, 161, 161);
+  display: flex;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App > div{
+  margin: 110px 0px 0px 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Stopwatch{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  
+  width: 690px;
+  height: 390px;
+}
+
+.Stopwatch-left-side{
+  width: 67%;
+  height: 90%;
+
+  background-color: rgb(235, 235, 235);
+  border-radius: 30px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  box-shadow: 10px 10px 0px 0px rgb(85, 85, 85),inset 5px 5px rgb(255, 255, 255);
+}
+
+.Display{
+  width: 400px;
+  height: 85px;
+
+  padding: 0px 10px;
+
+  font-size: 80px;
+  font-weight: 700;
+
+  background-color: #5e5e5e5e;
+  color: rgb(235, 235, 235);
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  box-shadow: inset 5px 5px rgb(85, 85, 85),4px 4px 0px 0px rgb(255, 255, 255);
+}
+
+.Display div{
+  text-shadow: 2px 2px rgb(85, 85, 85),-1px -1px rgb(255, 255, 255);
+}
+
+.Stopwatch-right-side{
+  width: 27%;
+  height: 90%;
+  background-color: rgb(235, 235, 235);
+  border-radius: 30px;
+
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
+
+  box-shadow: 6px 6px 0px 0px rgb(85, 85, 85),inset 2.5px 2.5px rgb(255, 255, 255);
+}
+
+button{
+    width: 140px;
+    height: 60px;
+  
+    border-radius: 10px;
+  
+    font-size: 30px;
+    font-weight: 700;
+  
+    cursor: pointer;
+    
+    transition: all .2s;
+
+    color: rgb(245, 245, 245);
+    border: 0;
+
+    background-color: rgb(70, 130, 70);
+
+    box-shadow: 5.5px 5.5px 0px 0px rgb(50, 100, 50); 
+}
+
+button:hover{
+  border: 10px solid rgb(0, 230, 0);
+  background-color: rgb(0, 230, 0);
+  box-shadow: 5.5px 5.5px 0px 0px rgb(60, 190, 60);
+  color: rgb(255, 255, 255)
+}
+
+button:active{
+  box-shadow: 3px 3px 0px 0px rgb(60, 190, 60);
+}
+
+.Btn-wrapper{
+  width: 160px;
+  height: 70px;
+
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+
+  margin: 10px 0px;
 }
 
-.App-link {
-  color: #61dafb;
+.Stop-Btn{
+  background-color: rgb(180, 70, 70);
+
+  box-shadow: 5.5px 5.5px 0px 0px rgb(100, 50, 50); 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Stop-Btn:hover{
+  border: 10px solid rgb(240, 0, 0);
+  background-color: rgb(240, 0, 0);
+  box-shadow: 5.5px 5.5px 0px 0px rgb(150, 50, 50);
+  color: rgb(255, 255, 255)
 }
+
+.Stop-Btn:active{
+  box-shadow: 3px 3px 0px 0px rgb(150, 50, 50);
+}
+
+.Wait-Btn{
+  background-color: rgb(70, 70, 130);
+
+  box-shadow: 5.5px 5.5px 0px 0px rgb(50, 50, 100); 
+}
+
+.Wait-Btn:hover{
+  border: 10px solid rgb(0, 0, 230);
+  background-color: rgb(0, 0, 230);
+  box-shadow: 5.5px 5.5px 0px 0px rgb(50, 50, 150);
+  color: rgb(255, 255, 255)
+}
+
+.Wait-Btn:active{
+  box-shadow: 3px 3px 0px 0px rgb(50, 50, 150);
+}
+
+.Reset-Btn{
+  background-color: rgb(210, 110, 0);
+
+  box-shadow: 5.5px 5.5px 0px 0px rgb(180, 90, 0); 
+}
+
+.Reset-Btn:hover{
+  border: 10px solid rgb(255, 128, 0);
+  background-color: rgb(255, 128, 0);
+  box-shadow: 5.5px 5.5px 0px 0px rgb(238, 118, 0);
+  color: rgb(255, 255, 255)
+}
+
+.Reset-Btn:active{
+  box-shadow: 3px 3px 0px 0px rgb(238, 118, 0);
+}
+
