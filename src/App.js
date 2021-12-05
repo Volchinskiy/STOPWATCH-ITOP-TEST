@@ -49,22 +49,22 @@ function App() {
   return (
     <section className="App">
       <div className="Stopwatch">
+
           <div className="Stopwatch-left-side">
             <div className="Display">
-              <div>{(time / 100) < 10 && <span>0</span>}{Math.trunc(time / 3600)}</div>
+              <div className="Display__wrapper">{(time / 100) < 10 && <span>0</span>}{Math.trunc(time / 3600)}</div>
 
-              <div>:</div>
+              <div className="Display__wrapper">:</div>
 
-              <div>{(time / 100) < 10 && <span>0</span>}{Math.trunc(time / 60) % 60}</div>
+              <div className="Display__wrapper">{(time / 100) < 10 && <span>0</span>}{Math.trunc(time / 60) % 60}</div>
 
-              <div>:</div>
+              <div className="Display__wrapper">:</div>
 
-              <div>{(time % 60) < 10 && <span>0</span>}{time % 60}</div>
+              <div className="Display__wrapper">{(time % 60) < 10 && <span>0</span>}{time % 60}</div>
             </div>
           </div>
 
           <div className="Stopwatch-right-side">
-            
               <div className="Btn-wrapper">
                 <button className={isTimerOn ? 'Stop-Btn' : ''} onClick={handleClick} id="start-stop" >{startStopBtn}</button>
               </div>
@@ -76,8 +76,8 @@ function App() {
               <div className="Btn-wrapper">
                 <button className="Reset-Btn" onClick={handleReset}>Reset</button>
               </div>
+          </div>
 
-          </div>    
         </div>
     </section>
   );
