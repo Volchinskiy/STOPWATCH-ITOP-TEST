@@ -13,11 +13,29 @@ function App() {
     setTimerOn(!isTimerOn);
   };
 
-  const handleWait = () => {
+  let pendingClick;
+  let clicked = 0;
+  let time_dbclick = 300 // 300ms
+
+  function handleWait(){
+    clicked++;
+    if(clicked >= 2){
+      mydblclick()
+      clearTimeout(pendingClick)
+      clicked = 0;
+      return;
+    }
+    clearTimeout(pendingClick)
+    pendingClick = setTimeout(() => {
+      clicked = 0;
+    }, time_dbclick);
+  }
+
+  function mydblclick(){
     if (time !== 0) {
       setTimerOn(false);
     }
-  };
+  }
 
   const handleReset = () => {
     setTime(0);
@@ -70,7 +88,7 @@ function App() {
               </div>
 
               <div className="Btn-wrapper">
-                <button className="Wait-Btn" onDoubleClick={handleWait} id="wait">Wait</button>
+                <button className="Wait-Btn" onClick={handleWait} id="wait">Wait</button>
               </div>
 
               <div className="Btn-wrapper">

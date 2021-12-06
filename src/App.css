@@ -73,7 +73,7 @@ body{
 
 .Stopwatch-right-side{
   width: 27%;
-  height: 70%;
+  height: 80%;
   background-color: rgb(235, 235, 235);
   border-radius: 30px;
 
@@ -232,7 +232,8 @@ button:active{
     height: 40px;
   }
   .Stopwatch-right-side{
-    width: 300px;
+    width: 307px;
+    height: 90px;
  
     margin: 0 auto;    
     flex-direction: row;
