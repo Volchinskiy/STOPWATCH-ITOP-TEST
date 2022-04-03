@@ -1,9 +1,9 @@
 It's a Stopwatch.
 
-on press START - It starts the countdown.
-on press STOP - It stops the countdown.
-on press RESET - It resets the counter.
-on double press WAIT - It this stops the counter.
+1) on press START - It starts the countdown.
+2) on press STOP - It stops the countdown.
+3) on press RESET - It resets the counter.
+4) on double press WAIT - It this stops the counter.
 
 I wrote this using React + RxJS. 
 
